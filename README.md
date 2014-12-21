@@ -25,7 +25,7 @@ That's it!
 Caveats
 -------
 
-**This only works in Node 0.10, not Node 0.11.**
+**This only works in Node 0.10, not Node 0.11.** If you want it to work in 0.11, you would have to change the node-webkit version in both `package.json` and `postinstall.sh` and try to install it that way.
 
 Also, I am using a prerelease version of PouchDB that may make it into version 3.2.1.
 See [PouchDB issue #3229 ](https://github.com/pouchdb/pouchdb/issues/3229) for details
