@@ -1,17 +1,18 @@
-"Hello world" in node-webkit
+PouchDB + Node-Webkit "Hello world"
 =======================
 
-Simple "Hello World" app with [node-webkit](https://github.com/rogerwang/node-webkit). It only does one extra thing besides saying "hello world," which is to show an iframe containing html5test.com, in case you're curious what HTML5 features node-webkit supports:
+Simple "Hello World" app with [node-webkit](https://github.com/rogerwang/node-webkit)
+and [PouchDB](http://pouchdb.com). All it does it check that we can have a PouchDB backed by:
 
-![Hello world screenshot](https://raw.githubusercontent.com/nolanlawson/node-webkit-hello-world/master/screenshot.png)
+* IndexedDB (the default)
+* WebSQL (alternative)
+* LevelDB (using Node)
+
+![Hello world screenshot](https://raw.githubusercontent.com/nolanlawson/node-webkit-pouchdb-demo/master/screenshot.png)
 
 Usage
 -----
 
-First, install node-webkit.  Then simply run e.g.:
+First, install node-webkit.  Then simply run `npm start`.
 
-    $ /path/to/node-webkit /path/to/node-webkit-hello-world
-    
 That's it!
-
-[Here](http://html5test.com/s/bc468c20a8d1f31f.html) are the HTML5 test results (for node-webkit v0.9.2).

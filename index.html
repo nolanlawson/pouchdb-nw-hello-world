@@ -4,9 +4,34 @@
 </head>
 <body>
 <h1>Hello world!</h1>
-<h3>Now you're cookin' with node-webkit.</h3>
+<h3>Now you're cookin' with node-webkit and PouchDB.</h3>
 
-<iframe src="http://html5test.com" style="width:100%;height:100%;">
-</iframe>
+<ul>
+  <li>Do we have an IndexedDB-based PouchDB? <span id="idb"></span></li>
+  <li>Do we have a WebSQL-based PouchDB? <span id="websql"></span></li>
+  <li>Do we have a LevelDB-based PouchDB? <span id="leveldb">Nope, Nolan couldn't figure out how to use <a href='https://github.com/rogerwang/node-webkit/wiki/Using-Node-modules'>nw-gyp</a></span></li>
+</ul>
+<script src="pouchdb-3.2.1-prerelease.js"></script>
+<script>
+  new PouchDB('using-idb', {adapter: 'idb'}).info().then(function () {
+    document.getElementById('idb').innerHTML = '&#10003;';
+  }).catch(function (err) {
+    document.getElementById('idb').innerHTML = "Nope, got an error: " + err;
+  });
+  
+  new PouchDB('using-websql', {adapter: 'websql'}).info().then(function () {
+    document.getElementById('websql').innerHTML = '&#10003;';
+  }).catch(function (err) {
+    document.getElementById('websql').innerHTML = "Nope, got an error: " + err;
+  });
+ /* 
+  var LevelPouchDB = require('pouchdb');
+  new LevelPouchDB('using-leveldb').info().then(function () {
+    document.getElementById('leveldb').innerHTML = '&#10003;';
+  }).catch(function (err) {
+    document.getElementById('leveldb').innerHTML = "Nope, got an error: " + err;
+  });
+  */
+</script>
 </body>
 <html>
