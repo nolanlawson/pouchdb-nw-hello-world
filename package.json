@@ -1,27 +1,15 @@
 {
-  "name": "node-webkit-hello-world",
+  "name": "node-webkit-pouchdb-demo",
+  "main": "./index.html",
   "version": "0.1.0",
-  "description": "Simple Hello World app using node-webkit",
+  "description": "Demo of PouchDB with Node-Webkit",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "sh ./bin/postinstall.sh",
     "start": "nodewebkit ."
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/nolanlawson/node-webkit-hello-world.git"
-  },
-  "keywords": [
-    "node-webkit",
-    "hello",
-    "world"
-  ],
   "author": "Nolan Lawson <nolan.lawson@gmail.com>",
   "license": "WTFPL",
-  "bugs": {
-    "url": "https://github.com/nolanlawson/node-webkit-hello-world/issues"
-  },
-  "homepage": "https://github.com/nolanlawson/node-webkit-hello-world",
-  "main": "./index.html",
   "window": {
     "toolbar": true,
     "width": 800,
@@ -29,7 +17,8 @@
     "resizable": false
   },
   "dependencies": {
-    "nodewebkit": "0.11.3",
+    "nodewebkit": "0.8.6-3",
+    "nw-gyp": "^0.12.4",
     "pouchdb": "^3.2.0"
   }
 }
