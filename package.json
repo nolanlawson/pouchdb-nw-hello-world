@@ -19,6 +19,6 @@
   "dependencies": {
     "nodewebkit": "0.8.6-3",
     "nw-gyp": "^0.12.4",
-    "pouchdb": "^3.2.0"
+    "pouchdb": "^3.2.1"
   }
 }
