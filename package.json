@@ -4,9 +4,8 @@
   "version": "0.1.0",
   "description": "Demo of PouchDB with Node-Webkit",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "sh ./bin/postinstall.sh",
-    "start": "nodewebkit ."
+    "postinstall": "cd node_modules/leveldown && nw-gyp configure --target=0.12.3 && nw-gyp build",
+    "start": "nw"
   },
   "author": "Nolan Lawson <nolan.lawson@gmail.com>",
   "license": "WTFPL",
@@ -17,8 +16,8 @@
     "resizable": false
   },
   "dependencies": {
-    "nodewebkit": "0.8.6-3",
-    "nw-gyp": "^0.12.4",
-    "pouchdb": "^3.2.1"
+    "nw": "0.12.3",
+    "nw-gyp": "0.13.0",
+    "pouchdb": "5.3.0"
   }
 }
