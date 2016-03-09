@@ -7,7 +7,6 @@ and [PouchDB](http://pouchdb.com). All it does it check that we can have a Pouch
 * IndexedDB (browser default)
 * WebSQL (browser alternative)
 * LevelDB (using Node)
-* SQLite (using [node-websql](https://github.com/nolanlawson/node-websql))
 
 Usage
 -----
