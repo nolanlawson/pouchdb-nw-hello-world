@@ -25,7 +25,7 @@ That's it! You should see:
 nw-gyp tricks
 -------
 
-Also, in order to get this working in LevelDB, you have to recompile leveldown using `nw-gyp`. I figured out how to get this to work,
+In order to get this working in LevelDB, you have to recompile leveldown using `nw-gyp`. I figured out how to get this to work,
 and if you check out the `postinstall` script in `package.json`, you can learn too. (Because it's a `postinstall` script, it will actually do it automatically when you `npm install`.)
 
 Thanks to [cozy-desktop](https://github.com/cozy-labs/cozy-desktop/blob/master/gulpfile.js)
